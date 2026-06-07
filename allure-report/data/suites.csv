@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","9791","Account Registration Test Case @sanity @regression @master","chromium","2026-06-05","passed","2026-06-05","","AccountRegistration.spec.ts","",""
+"","10668","Login into the Opencart Application","chromium","2026-06-05","passed","2026-06-05","","Login.spec.ts","",""
+"","15047","Account Registration Test Case","chromium","2026-06-05","passed","2026-06-05","","AccountRegistration.spec.ts","",""

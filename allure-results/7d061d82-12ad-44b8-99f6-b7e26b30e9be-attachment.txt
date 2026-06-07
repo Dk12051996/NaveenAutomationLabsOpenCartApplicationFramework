@@ -1,0 +1,6 @@
+Product Not found MacBook
+Product Not found MacBook
+Product Not found Error: locator.textContent: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('h4 a').nth(2)
+

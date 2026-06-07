@@ -1,0 +1,62 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Login.spec.ts >> Login into the Opencart Application
+- Location: tests\Login.spec.ts:25:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded while running "beforeEach" hook.
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from "@playwright/test"
+  2  | import { Homepage } from "../Pages/Homepage"
+  3  | import { LoginPage } from "../Pages/LoginPage"
+  4  | import { MyAccountPage } from "../Pages/MyAccountPage"
+  5  | import { TestConfig } from "../test.config"
+  6  | 
+  7  | let testconfig: TestConfig;
+  8  | let homepage : Homepage;
+  9  | let login : LoginPage;
+  10 | let myaccountpage : MyAccountPage;
+  11 | 
+  12 | 
+> 13 | test.beforeEach("Launch URL", async ({ page }) => {
+     |      ^ Test timeout of 30000ms exceeded while running "beforeEach" hook.
+  14 |     let testconfig = new TestConfig()
+  15 |     await page.goto(testconfig.appUrl)
+  16 | 
+  17 | })
+  18 | 
+  19 | test.afterEach("close Application" , async ({page}) => {
+  20 | 
+  21 |     await page.waitForTimeout(3000)
+  22 |     await page.close();
+  23 | })
+  24 | 
+  25 | test("Login into the Opencart Application", async ({ page }) => {
+  26 | 
+  27 |     let homepage = new Homepage(page)
+  28 |     await homepage.clickonMyAccount()
+  29 |     await homepage.clickOnLogin()
+  30 | 
+  31 |     let login = new LoginPage(page)
+  32 |     let cred = new TestConfig()
+  33 |     await login.LoginApplication(cred.email,cred.password)
+  34 | 
+  35 |     let myaccountpage = new MyAccountPage(page)
+  36 |     myaccountpage.HeadingMyAccount()
+  37 | 
+  38 |     
+  39 | 
+  40 | })
+```

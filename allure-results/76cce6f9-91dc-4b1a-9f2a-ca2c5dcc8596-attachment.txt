@@ -1,0 +1,9 @@
+Error Occurs while click on the Register : Error: locator.click: Error: strict mode violation: locator('//a[text()=\'Register\']') resolved to 2 elements:
+    1) <a href="https://naveenautomationlabs.com/opencart/index.php?route=account/register">Register</a> aka locator('#top-links').getByText('Register')
+    2) <a class="list-group-item" href="https://naveenautomationlabs.com/opencart/index.php?route=account/register">Register</a> aka getByRole('link', { name: 'Register' })
+
+Call log:
+  - waiting for locator('//a[text()=\'Register\']')
+    - waiting for" https://naveenautomationlabs.com/opencart/index.php?route=account/logout" navigation to finish...
+    - navigated to "https://naveenautomationlabs.com/opencart/index.php?route=account/logout"
+
