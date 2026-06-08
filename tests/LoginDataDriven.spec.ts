@@ -12,9 +12,14 @@ import { Homepage } from "../Pages/Homepage"
 const jsonpath = path.join(process.cwd(), 'TestData', 'logindata.json');
 const csvpath = path.join(process.cwd(), 'TestData', 'logindata.csv');
 */
+
+const jsonpath = "TestData/logindata.json"
+const csvpath = "TestData/logindata.csv"
+
+/*
 const jsonpath = "D:/NaveenAutomationLabsOpenCart/TestData/logindata.json"
 const csvpath = "D:/NaveenAutomationLabsOpenCart/TestData/logindata.csv"
-
+*/
 const jsontestData = DataProvider.getTestDataFromJSON(jsonpath)
 const csvtestData = DataProvider.getTestDataFromCSV(csvpath)
 
