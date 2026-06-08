@@ -22,7 +22,7 @@ test.afterEach("close Application" , async ({page}) => {
     await page.close();
 })
 
-test("Login into the Opencart Application", async ({ page }) => {
+test("Login into the Opencart Application @sanity", async ({ page }) => {
 
     let homepage = new Homepage(page)
     await homepage.clickonMyAccount()
