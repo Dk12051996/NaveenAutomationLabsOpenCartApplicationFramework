@@ -5,12 +5,15 @@ import { MyAccountPage } from "../Pages/MyAccountPage"
 import { DataProvider } from "../Utils/Dataprovider"
 import { TestConfig } from "../test.config"
 import { Homepage } from "../Pages/Homepage"
+import path from 'path';
 
 //Load JSON test data logindata.json
-
+const jsonpath = path.join(process.cwd(), 'TestData', 'logindata.json');
+const csvpath = path.join(process.cwd(), 'TestData', 'logindata.csv');
+/*
 const jsonpath = "D:/NaveenAutomationLabsOpenCart/TestData/logindata.json"
 const csvpath = "D:/NaveenAutomationLabsOpenCart/TestData/logindata.csv"
-
+*/
 const jsontestData = DataProvider.getTestDataFromJSON(jsonpath)
 const csvtestData = DataProvider.getTestDataFromCSV(csvpath)
 
